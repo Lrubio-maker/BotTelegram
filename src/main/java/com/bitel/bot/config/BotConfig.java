@@ -1,5 +1,7 @@
-package Services;
+package com.bitel.bot.config;
 
+
+import com.bitel.bot.services.TelegramBotService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.TelegramBotsApi;

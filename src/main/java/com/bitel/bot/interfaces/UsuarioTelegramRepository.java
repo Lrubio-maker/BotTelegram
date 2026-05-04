@@ -1,13 +1,12 @@
-package Interfaces;
+package com.bitel.bot.interfaces;
 
-
-
+import com.bitel.bot.model.UsuarioTelegram;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import Model.UsuarioTelegram;
+import java.util.List;
 
 @Repository
 public interface UsuarioTelegramRepository extends JpaRepository<UsuarioTelegram, Long> {
-    // Spring crea el código automáticamente por detrás. ¡No tienes que escribir nada más aquí!
+    List<UsuarioTelegram> findByEstado(String estado);
 }

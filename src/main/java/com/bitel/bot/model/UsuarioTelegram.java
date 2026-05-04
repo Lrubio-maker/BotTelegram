@@ -1,20 +1,18 @@
-package Model;
+package com.bitel.bot.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "usuarios_bot") // Así se llamará la tabla en MySQL
+@Table(name = "usuarios_bot")
 public class UsuarioTelegram {
 
-    @Id // Esta será la llave primaria (El Chat ID es único)
+    @Id
     private Long chatId;
-    
     private String nombre;
-    private String estado; // Guardaremos "APROBADO" o "PENDIENTE"
+    private String estado;
 
-    // Constructores
     public UsuarioTelegram() {}
 
     public UsuarioTelegram(Long chatId, String nombre, String estado) {
@@ -23,7 +21,6 @@ public class UsuarioTelegram {
         this.estado = estado;
     }
 
-    // Getters y Setters (Obligatorios para Hibernate)
     public Long getChatId() { return chatId; }
     public void setChatId(Long chatId) { this.chatId = chatId; }
 
